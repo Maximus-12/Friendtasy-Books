@@ -11,29 +11,18 @@
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home" />
 
-    <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.example.friendtasybooks.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
-
-    <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.example.friendtasybooks.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
 
     <fragment
         android:id="@+id/nav_profile"
-        android:name="com.example.friendtasybooks.ui.slideshow.SlideshowFragment"
+        android:name="com.example.friendtasybooks.ui.profile.ProfileFragment"
         android:label="@string/menu_profile"
         tools:layout="@layout/fragment_profile" />
 
     <fragment
-        android:id="@+id/nav_trade"
+        android:id="@+id/nav_mybook"
         android:name="com.example.friendtasybooks.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_trade"
-        tools:layout="@layout/fragment_trade" />
+        android:label="@string/menu_mybook"
+        tools:layout="@layout/fragment_mybook" />
 
     <fragment
         android:id="@+id/nav_badge"
