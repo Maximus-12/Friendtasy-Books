@@ -49,7 +49,7 @@
         app:layout_constraintHorizontal_bias="0.161"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView2"
-        tools:src="@drawable/headgirl2" />
+        app:srcCompat="@drawable/headgirl2" />
 
     <ImageView
         android:id="@+id/imageView4"
@@ -60,7 +60,7 @@
         app:layout_constraintHorizontal_bias="0.161"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView3"
-        tools:src="@drawable/headboy3" />
+        app:srcCompat="@drawable/headboy3" />
 
     <TextView
         android:id="@+id/textView4"
@@ -82,7 +82,7 @@
         app:layout_constraintHorizontal_bias="0.161"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView4"
-        tools:src="@drawable/headgirl3" />
+        app:srcCompat="@drawable/headgirl3" />
 
     <TextView
         android:id="@+id/textView5"
@@ -104,7 +104,7 @@
         app:layout_constraintHorizontal_bias="0.161"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView5"
-        tools:src="@drawable/headgirl3" />
+        app:srcCompat="@drawable/headgirl3" />
 
     <TextView
         android:id="@+id/textView6"
@@ -126,7 +126,7 @@
         app:layout_constraintHorizontal_bias="0.161"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView6"
-        tools:src="@drawable/headgirl4" />
+        app:srcCompat="@drawable/headgirl4" />
 
     <TextView
         android:id="@+id/textView7"
