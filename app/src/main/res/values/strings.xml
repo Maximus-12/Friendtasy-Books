@@ -14,4 +14,10 @@
     <string name="menu_mybook">幻書</string>
     <string name="menu_badge">榮譽勳章</string>
     <string name="menu_friends">我的好友</string>
+
+    <string name="friend_Yu">郁蓁</string>>
+    <string name="friend_Wating">薇婷</string>>
+    <string name="friend_Maximus">建榮</string>>
+    <string name="friend_Hsuan">芷玄</string>>
+
 </resources>
