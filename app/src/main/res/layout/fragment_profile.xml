@@ -11,6 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="84dp"
+        android:fontFamily="@font/GenJyuuGothic_Medium"
         android:text="地區"
         android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="parent"
