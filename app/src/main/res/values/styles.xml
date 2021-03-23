@@ -5,4 +5,22 @@
         <item name="android:textColor">@color/word_white</item>
         <item name="android:fontFamily">@font/genjyuugothic</item>
     </style>
+    <style name="home_YelloButton">
+        <item name="android:color">@color/yellow</item>
+        <item name="android:textSize">25sp</item>
+        <item name="android:textColor">@color/word_gray</item>
+        <item name="android:layout_width">200dp</item>
+        <item name="android:layout_height">70dp</item>
+        <item name="android:fontFamily">@font/genjyuugothic</item>
+    </style>
+    <style name="friend_whiteText">
+        <item name="android:textColor">@color/word_white</item>
+        <item name="android:fontFamily">@font/genjyuugothic</item>
+        <item name="android:textSize">36sp</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_width">100dp</item>
+        <item name="android:layout_marginStart">20dp</item>
+        <item name="android:layout_marginTop">70dp</item>
+    </style>
+
 </resources>

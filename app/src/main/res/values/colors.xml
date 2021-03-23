@@ -11,4 +11,5 @@
     <color name="word_white">#e2e1d7</color>
     <color name="yellow">#ecae49</color>
     <color name="word_gray">#3f3f3f</color>
+    <color name="no_color">#00000000</color>
 </resources>
