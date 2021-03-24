@@ -57,6 +57,12 @@
         <item name="android:background">@drawable/line_shape</item>
         <item name="android:layout_height">10dp</item>
         <item name="android:layout_width">match_parent</item>
-
+    </style>
+    <style name="mybook_12_text">
+        <item name="android:fontFamily">@font/genjyuugothic</item>
+        <item name="android:layout_width">100dp</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:textColor">@color/word_white</item>
+        <item name="android:textSize">30sp</item>
     </style>
 </resources>
