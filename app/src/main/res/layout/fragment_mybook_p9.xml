@@ -10,9 +10,7 @@
 
     <Button
         android:id="@+id/button2"
-        style="@style/whiteText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        style="@style/mybook_YellowButton"
         android:layout_marginBottom="92dp"
         android:text="確定"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -23,8 +21,8 @@
     <ImageView
         android:id="@+id/imageView8"
         android:layout_width="241dp"
-        android:layout_height="209dp"
-        android:layout_marginTop="124dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="120dp"
         android:layout_marginEnd="76dp"
         android:src="@drawable/title"
         app:layout_constraintBottom_toTopOf="@+id/editText"
@@ -47,6 +45,7 @@
         android:id="@+id/text_prompt2"
         android:layout_width="333dp"
         android:layout_height="43dp"
+        android:layout_marginBottom="15dp"
         android:fontFamily="@font/genjyuugothic"
         android:text="正確的幻書分類可以提高成功機率呦!"
         android:textColor="@color/word_white"

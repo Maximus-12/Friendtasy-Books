@@ -92,19 +92,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text_Sex" />
 
-    <Button
-        android:id="@+id/button"
-        style="@style/profile_Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="120dp"
-        android:scrollbarStyle="outsideOverlay"
-        android:text="進入幻書世界"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent" />
-
     <TextView
         android:id="@+id/text_Nickname2"
         style="@style/whiteText"
@@ -116,5 +103,50 @@
         app:layout_constraintHorizontal_bias="0.726"
         app:layout_constraintStart_toEndOf="@+id/text_Nickname"
         app:layout_constraintTop_toBottomOf="@+id/image_Avatar" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="290dp"
+        android:layout_height="340dp"
+        android:layout_marginTop="170dp"
+        android:background="@drawable/word_white_radius"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView9"
+        style="@style/profile_block"
+        android:layout_marginTop="60dp"
+        android:text="你的名字是？"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView8" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:alpha="0.7"
+        android:textColor="@color/word_gray"
+        android:background="@color/yellow"
+        android:gravity="center"
+        android:fontFamily="@font/genjyuugothic"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView9"
+        tools:text="text" />
+
+    <Button
+        android:id="@+id/button5"
+        style="@style/profile_block_button"
+        android:layout_marginTop="230dp"
+        android:text="確定"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView8" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/bg_black"
     tools:context=".ui.home.HomeFragment">
 
     <ImageView
@@ -19,24 +20,17 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="20dp"
+        style="@style/friend_whiteText"
         android:layout_marginTop="55dp"
         android:fontFamily="sans-serif"
         android:text="@string/friend_Yu"
-        android:textSize="36sp"
         app:layout_constraintStart_toEndOf="@+id/imageView2"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="70dp"
+        style="@style/friend_whiteText"
         android:text="@string/friend_Hsuan"
-        android:textSize="36sp"
         app:layout_constraintStart_toEndOf="@+id/imageView3"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
@@ -64,12 +58,8 @@
 
     <TextView
         android:id="@+id/textView4"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="70dp"
+        style="@style/friend_whiteText"
         android:text="@string/friend_Maximus"
-        android:textSize="36sp"
         app:layout_constraintStart_toEndOf="@+id/imageView4"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
@@ -86,12 +76,8 @@
 
     <TextView
         android:id="@+id/textView5"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="70dp"
+        style="@style/friend_whiteText"
         android:text="@string/friend_Wating"
-        android:textSize="36sp"
         app:layout_constraintStart_toEndOf="@+id/imageView5"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
@@ -108,12 +94,8 @@
 
     <TextView
         android:id="@+id/textView6"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="70dp"
+        style="@style/friend_whiteText"
         android:text="@string/friend_Yu"
-        android:textSize="36sp"
         app:layout_constraintStart_toEndOf="@+id/imageView6"
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
@@ -130,12 +112,8 @@
 
     <TextView
         android:id="@+id/textView7"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="70dp"
+        style="@style/friend_whiteText"
         android:text="@string/friend_Wating"
-        android:textSize="36sp"
         app:layout_constraintStart_toEndOf="@+id/imageView7"
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
