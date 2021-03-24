@@ -141,5 +141,50 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView28" />
 
+    <TextView
+        android:id="@+id/textView30"
+        android:layout_width="290dp"
+        android:layout_height="340dp"
+        android:layout_marginTop="200dp"
+        android:background="@drawable/word_white_radius"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView31"
+        style="@style/profile_block"
+        android:text="離您最近的\n便利商店？"
+        android:textSize="30sp"
+        android:layout_height="100dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView23" />
+
+    <TextView
+        android:id="@+id/textView32"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        tools:text="TextView"
+        android:alpha="0.7"
+        android:textColor="@color/word_gray"
+        android:background="@color/yellow"
+        android:gravity="center"
+        android:fontFamily="@font/genjyuugothic"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView31" />
+
+    <Button
+        android:id="@+id/button7"
+        style="@style/profile_block_button"
+        android:layout_marginTop="230dp"
+        android:text="確定"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textView30" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
