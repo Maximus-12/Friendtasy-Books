@@ -10,29 +10,29 @@
         android:name="com.example.friendtasybooks.ui.home.HomeFragment"
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home" />
-
-
     <fragment
         android:id="@+id/nav_profile"
         android:name="com.example.friendtasybooks.ui.profile.ProfileFragment"
         android:label="@string/menu_profile"
         tools:layout="@layout/fragment_profile" />
-
     <fragment
         android:id="@+id/nav_mybook"
         android:name="com.example.friendtasybooks.ui.slideshow.SlideshowFragment"
         android:label="@string/menu_mybook"
         tools:layout="@layout/fragment_mybook" />
-
     <fragment
         android:id="@+id/nav_badge"
         android:name="com.example.friendtasybooks.ui.slideshow.SlideshowFragment"
         android:label="@string/menu_badge"
         tools:layout="@layout/fragment_badge" />
-
     <fragment
         android:id="@+id/nav_friends"
         android:name="com.example.friendtasybooks.ui.friends.FriendFragment"
         android:label="@string/menu_friends"
         tools:layout="@layout/fragment_friends" />
+    <fragment
+        android:id="@+id/nav_rule"
+        android:name="com.example.friendtasybooks.ui.rule.RuleFragment"
+        android:label="@string/menu_rule"
+        tools:layout="@layout/fragment_rule" />
 </navigation>
