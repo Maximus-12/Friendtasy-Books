@@ -1,33 +1,41 @@
 {
   "project_info": {
-    "project_number": "1089553635421",
-    "project_id": "friendtasybooks",
-    "storage_bucket": "friendtasybooks.appspot.com"
+    "project_number": "650495689054",
+    "project_id": "friendtasy-books",
+    "storage_bucket": "friendtasy-books.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1089553635421:android:5297cb4403e7a6af4d95b4",
+        "mobilesdk_app_id": "1:650495689054:android:1ce06fc7820d235b8d4fcf",
         "android_client_info": {
           "package_name": "com.example.friendtasybooks"
         }
       },
       "oauth_client": [
         {
-          "client_id": "1089553635421-md1g7r3qo45nok408t220frong7pte75.apps.googleusercontent.com",
+          "client_id": "650495689054-bt85ob0qpba4t413ra1j07ruidtkuiei.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.friendtasybooks",
+            "certificate_hash": "8576c83ee3b5559e37d01b522e737296ffc32713"
+          }
+        },
+        {
+          "client_id": "650495689054-3lv2rmeeo33e8b86te68delvciff1dh5.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyABj9p9ciEUMY3bZ2C28km2V02deKFw7sU"
+          "current_key": "AIzaSyAgVjsmXCPqNU39mo4Jz6l8KhA37MekEno"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "1089553635421-md1g7r3qo45nok408t220frong7pte75.apps.googleusercontent.com",
+              "client_id": "650495689054-3lv2rmeeo33e8b86te68delvciff1dh5.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

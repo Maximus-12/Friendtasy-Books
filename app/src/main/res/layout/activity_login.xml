@@ -22,7 +22,8 @@
         />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/loginbtn"
+        app:backgroundTint="@color/yellow"
         style="@style/profile_Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

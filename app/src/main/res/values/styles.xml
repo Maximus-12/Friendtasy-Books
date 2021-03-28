@@ -5,7 +5,12 @@
         <item name="android:textColor">@color/word_white</item>
         <item name="android:fontFamily">@font/genjyuugothic</item>
     </style>
-    <style name="home_YelloButton">
+    <style name="logout">
+        <item name="android:textSize">35sp</item>
+        <item name="android:textColor">@color/word_gray</item>
+        <item name="android:fontFamily">@font/genjyuugothic</item>
+    </style>
+    <style name="home_YellowButton">
         <item name="android:color">@color/yellow</item>
         <item name="android:textSize">25sp</item>
         <item name="android:textColor">@color/word_gray</item>
@@ -13,6 +18,7 @@
         <item name="android:layout_height">70dp</item>
         <item name="android:fontFamily">@font/genjyuugothic</item>
         <item name="android:gravity">center</item>
+        <item name="android:background">@color/yellow</item>
     </style>
     <style name="friend_whiteText">
         <item name="android:textColor">@color/word_white</item>

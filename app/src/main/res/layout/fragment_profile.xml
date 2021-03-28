@@ -99,6 +99,8 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="120dp"
         android:scrollbarStyle="outsideOverlay"
+        app:backgroundTint="@color/yellow"
+
         android:text="進入幻書世界"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

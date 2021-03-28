@@ -1,6 +1,9 @@
 package com.example.friendtasybooks;
 
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Menu;
@@ -17,14 +20,59 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import com.firebase.ui.database.FirebaseRecyclerAdapter;
+import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.google.android.gms.auth.api.signin.GoogleSignIn;
+import com.google.android.gms.auth.api.signin.GoogleSignInClient;
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+import com.google.firebase.storage.UploadTask;
+
 public class MainActivity extends AppCompatActivity {
+    private static final String TAG = "MainActivity";
 
     private AppBarConfiguration mAppBarConfiguration;
+    // Firebase instance variables
+    private SharedPreferences mSharedPreferences;
+    private GoogleSignInClient mSignInClient;
+    private FirebaseAuth mFirebaseAuth;
+    private FirebaseDatabase mDatabase;
+    //private FirebaseRecyclerAdapter<FriendlyMessage, MessageViewHolder>
+    //        mFirebaseAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        mSharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+
+        // Initialize Firebase Auth and check if the user is signed in
+        mFirebaseAuth = FirebaseAuth.getInstance();
+        if (mFirebaseAuth.getCurrentUser() == null) {
+            // Not signed in, launch the Sign In activity
+            startActivity(new Intent(this, LoginActivity.class));
+            finish();
+            return;
+        }
+
+        GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+                .requestIdToken(getString(R.string.default_web_client_id))
+                //.requestIdToken("1089553635421-er8ge4knu880ea63m24f9c9ffac2bu2u.apps.googleusercontent.com")
+                .requestEmail()
+                .build();
+        mSignInClient = GoogleSignIn.getClient(this, gso);
+
+
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         FloatingActionButton fab = findViewById(R.id.fab);

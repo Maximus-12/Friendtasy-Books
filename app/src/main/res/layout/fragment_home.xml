@@ -9,8 +9,9 @@
 
     <Button
         android:id="@+id/button3"
-        style="@style/home_YelloButton"
+        style="@style/home_YellowButton"
         android:layout_marginTop="160dp"
+        app:backgroundTint="@color/yellow"
         android:text="我有幻書"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -19,8 +20,9 @@
 
     <Button
         android:id="@+id/button4"
-        style="@style/home_YelloButton"
+        style="@style/home_YellowButton"
         android:layout_marginTop="70dp"
+        app:backgroundTint="@color/yellow"
         android:text="我要幻書"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
