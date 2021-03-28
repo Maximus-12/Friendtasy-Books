@@ -17,7 +17,9 @@ import androidx.navigation.NavController;
 
 import com.example.friendtasybooks.MainActivity;
 import com.example.friendtasybooks.R;
+import com.example.friendtasybooks.UserData;
 import com.example.friendtasybooks.ui.slideshow.SlideshowViewModel;
+import com.google.android.material.snackbar.Snackbar;
 
 import static androidx.navigation.fragment.NavHostFragment.findNavController;
 
@@ -29,11 +31,21 @@ public class ProfileFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_profile, container, false);
-        TextView nickname =  root.findViewById(R.id.text_NicknameText);
-        nickname.setText(((MainActivity)getActivity()).getUserName());
-
         NavController navCtrl = findNavController(this);
+        UserData userdata=((MainActivity)getActivity()).read_data();
+
         ImageView image_Avatar = root.findViewById(R.id.image_Avatar);
+        //image change
+        TextView nickname =  root.findViewById(R.id.text_NicknameText);
+        nickname.setText((userdata.username));
+        TextView gender =  root.findViewById(R.id.text_SexText);
+        if(userdata.gender==1) gender.setText("男");
+        else if(userdata.gender==2) gender.setText("女");
+        else gender.setText("未選擇");
+        TextView city =  root.findViewById(R.id.text_LocalText);
+        city.setText((userdata.city));
+
+
         image_Avatar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -51,9 +63,12 @@ public class ProfileFragment extends Fragment {
         save_profile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                navCtrl.navigate(R.id.nav_profile_name);
+                Snackbar.make(view, "儲存成功！(其實不用這顆按鍵(?))", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
+                ((MainActivity)getActivity()).write_data(userdata);
             }
         });
         return root;
     }
 }
+

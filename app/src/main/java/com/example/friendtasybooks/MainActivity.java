@@ -48,7 +48,7 @@ import java.util.HashMap;
 
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = "MainActivity";
-
+    public UserData userdata;
     private AppBarConfiguration mAppBarConfiguration;
     // Firebase instance variables
     private SharedPreferences mSharedPreferences;
@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
     // [START declare_database_ref]
     private DatabaseReference mDatabase;
     // [END declare_database_ref]
-
+    public String UserUid;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -116,7 +116,6 @@ public class MainActivity extends AppCompatActivity {
             String name = user.getDisplayName();
             String email = user.getEmail();
             Uri photoUrl = user.getPhotoUrl();
-            username.setText(name);
             // Check if user's email is verified
             boolean emailVerified = user.isEmailVerified();
 
@@ -124,6 +123,7 @@ public class MainActivity extends AppCompatActivity {
             // authenticate with your backend server, if you have one. Use
             // FirebaseUser.getIdToken() instead.
             String uid = user.getUid();
+            UserUid=uid;
             Log.w(TAG, "UserID = "+uid);
             //UserID = ni7bz29bmUaQGZJidV2c9rVCCzn2
         }
@@ -138,7 +138,7 @@ public class MainActivity extends AppCompatActivity {
         mDatabase = FirebaseDatabase.getInstance().getReference();
         // [END initialize_database_ref]
 
-        //UserData userdata = new UserData(1,"Test Name",1,"Taipei");
+        //userdata = new UserData(1,"Test Name",1,"Taipei");
         // headshot 1.2.3.4=m.1234 5678=f.1234 0=null, gender 1=male 2=female 0=null
         //mDatabase.child("users").child(user.getUid()).setValue(userdata);
         //mDatabase.child("users").child(user.getUid()).child("username").setValue(name);
@@ -153,7 +153,8 @@ public class MainActivity extends AppCompatActivity {
                     HashMap post = (HashMap) task.getResult().getValue();
                     if(post==null){
                         Log.d("firebase data", String.valueOf(post));
-                        mDatabase.child("users").child(user.getUid()).setValue(new UserData(0,user.getDisplayName(),0,"未選擇"));
+                        userdata = new UserData(0,user.getDisplayName(),0,"未選擇");
+                        mDatabase.child("users").child(user.getUid()).setValue(userdata);
                     }
                     else{
                         //Log.d("firebase", String.valueOf(task.getResult().getValue()));
@@ -161,10 +162,22 @@ public class MainActivity extends AppCompatActivity {
                         //post.getClass();
                         //post.get(3);
                         //Log.d("headshot", String.valueOf(post.getClass()));
-                        Log.d("headshot", String.valueOf(post.get("headshot")));
-                        Log.d("firebase", String.valueOf(post.get("gender")));
-                        Log.d("firebase", String.valueOf(post.get("username")));
-                        Log.d("firebase", String.valueOf(post.get("city")));
+                        /*Log.d("headshot", String.valueOf(post.get("headshot")));
+                        Log.d("gender", String.valueOf(post.get("gender")));
+                        Log.d("username", String.valueOf(post.get("username")));
+                        Log.d("city", String.valueOf(post.get("city")));*/
+                        userdata = new UserData(0,user.getDisplayName(),0,"未選擇");
+                        long hs=(long)post.get("headshot");
+                        userdata.headshot=(int)hs;
+                        long gd=(long)post.get("gender");
+                        userdata.gender=(int)gd;
+                        userdata.username=(String)post.get("username");
+                        userdata.city=(String)post.get("city");
+                        Log.d("headshot", String.valueOf(userdata.headshot));
+                        Log.d("gender", String.valueOf(userdata.gender));
+                        Log.d("username", String.valueOf(userdata.username));
+                        Log.d("city", String.valueOf(userdata.city));
+                        username.setText(userdata.username);
                     }
                 }
             }
@@ -202,5 +215,12 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return "anonymous";
+    }
+    public UserData read_data(){
+        return userdata;
+    }
+    public void write_data(UserData temp){
+        userdata=temp;
+        mDatabase.child("users").child(UserUid).setValue(userdata);
     }
 }

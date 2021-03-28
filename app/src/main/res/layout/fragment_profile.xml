@@ -10,7 +10,7 @@
     android:textColor="@color/word_white">
 
     <TextView
-        android:id="@+id/text_Local2"
+        android:id="@+id/text_LocalText"
         style="@style/whiteText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -19,14 +19,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.672"
         app:layout_constraintStart_toEndOf="@+id/text_Local"
-        app:layout_constraintTop_toBottomOf="@+id/text_Sex2" />
+        app:layout_constraintTop_toBottomOf="@+id/text_SexText" />
 
     <TextView
-        android:id="@+id/text_Sex2"
+        android:id="@+id/text_SexText"
         style="@style/whiteText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="86dp"
+        android:layout_marginTop="84dp"
         android:text="女"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.652"

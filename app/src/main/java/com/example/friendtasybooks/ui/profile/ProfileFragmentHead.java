@@ -13,6 +13,7 @@ import androidx.navigation.NavController;
 
 import com.example.friendtasybooks.MainActivity;
 import com.example.friendtasybooks.R;
+import com.example.friendtasybooks.UserData;
 import com.google.android.material.snackbar.Snackbar;
 
 import static androidx.navigation.fragment.NavHostFragment.findNavController;
@@ -25,8 +26,9 @@ public class ProfileFragmentHead extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_profile_head, container, false);
-
         NavController navCtrl = findNavController(this);
+        UserData userdata=((MainActivity)getActivity()).read_data();
+
         Button profile_head_button = root.findViewById(R.id.profile_head_button);
         profile_head_button.setOnClickListener(new View.OnClickListener() {
             @Override
