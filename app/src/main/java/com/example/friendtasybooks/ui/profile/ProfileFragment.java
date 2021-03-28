@@ -47,6 +47,13 @@ public class ProfileFragment extends Fragment {
                 navCtrl.navigate(R.id.nav_profile_name);
             }
         });
+        Button save_profile = root.findViewById(R.id.save_profile);
+        save_profile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                navCtrl.navigate(R.id.nav_profile_name);
+            }
+        });
         return root;
     }
 }

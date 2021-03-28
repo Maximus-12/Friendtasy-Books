@@ -5,6 +5,7 @@ import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Menu;
@@ -15,6 +16,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
+import androidx.annotation.NonNull;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -34,12 +36,15 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
+
+import java.util.HashMap;
 
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = "MainActivity";
@@ -49,9 +54,12 @@ public class MainActivity extends AppCompatActivity {
     private SharedPreferences mSharedPreferences;
     private GoogleSignInClient mSignInClient;
     private FirebaseAuth mFirebaseAuth;
-    private FirebaseDatabase mDatabase;
+    //private FirebaseDatabase mDatabase;
     //private FirebaseRecyclerAdapter<FriendlyMessage, MessageViewHolder>
     //        mFirebaseAdapter;
+    // [START declare_database_ref]
+    private DatabaseReference mDatabase;
+    // [END declare_database_ref]
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -116,12 +124,49 @@ public class MainActivity extends AppCompatActivity {
             // authenticate with your backend server, if you have one. Use
             // FirebaseUser.getIdToken() instead.
             String uid = user.getUid();
+            Log.w(TAG, "UserID = "+uid);
+            //UserID = ni7bz29bmUaQGZJidV2c9rVCCzn2
         }
         Button logout = findViewById(R.id.logout);
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 signOut();
+            }
+        });
+        // [START initialize_database_ref]
+        mDatabase = FirebaseDatabase.getInstance().getReference();
+        // [END initialize_database_ref]
+
+        //UserData userdata = new UserData(1,"Test Name",1,"Taipei");
+        // headshot 1.2.3.4=m.1234 5678=f.1234 0=null, gender 1=male 2=female 0=null
+        //mDatabase.child("users").child(user.getUid()).setValue(userdata);
+        //mDatabase.child("users").child(user.getUid()).child("username").setValue(name);
+
+        mDatabase.child("users").child(user.getUid()).get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DataSnapshot> task) {
+                if (!task.isSuccessful()) {
+                    Log.e("firebase", "Error getting data", task.getException());
+                }
+                else {
+                    HashMap post = (HashMap) task.getResult().getValue();
+                    if(post==null){
+                        Log.d("firebase data", String.valueOf(post));
+                        mDatabase.child("users").child(user.getUid()).setValue(new UserData(0,user.getDisplayName(),0,"未選擇"));
+                    }
+                    else{
+                        //Log.d("firebase", String.valueOf(task.getResult().getValue()));
+                        Log.d("firebase", String.valueOf(post));
+                        //post.getClass();
+                        //post.get(3);
+                        //Log.d("headshot", String.valueOf(post.getClass()));
+                        Log.d("headshot", String.valueOf(post.get("headshot")));
+                        Log.d("firebase", String.valueOf(post.get("gender")));
+                        Log.d("firebase", String.valueOf(post.get("username")));
+                        Log.d("firebase", String.valueOf(post.get("city")));
+                    }
+                }
             }
         });
     }
