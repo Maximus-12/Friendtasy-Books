@@ -10,6 +10,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.Menu;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -43,6 +44,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
+import com.google.protobuf.StringValue;
 
 import java.util.HashMap;
 
@@ -60,6 +62,8 @@ public class MainActivity extends AppCompatActivity {
     // [START declare_database_ref]
     private DatabaseReference mDatabase;
     // [END declare_database_ref]
+    private TextView username;
+    private ImageView usericon;
     public String UserUid;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -109,8 +113,8 @@ public class MainActivity extends AppCompatActivity {
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
 
         View headerView = navigationView.getHeaderView(0);
-        TextView username = (TextView) headerView.findViewById(R.id.username);
-
+        username = (TextView) headerView.findViewById(R.id.username);
+        usericon = (ImageView) headerView.findViewById(R.id.usericon);
         if (user != null) {
             // Name, email address, and profile photo Url
             String name = user.getDisplayName();
@@ -178,6 +182,7 @@ public class MainActivity extends AppCompatActivity {
                         Log.d("username", String.valueOf(userdata.username));
                         Log.d("city", String.valueOf(userdata.city));
                         username.setText(userdata.username);
+                        setUsericon(userdata,usericon);
                     }
                 }
             }
@@ -221,6 +226,20 @@ public class MainActivity extends AppCompatActivity {
     }
     public void write_data(UserData temp){
         userdata=temp;
+        username.setText(userdata.username);
+        setUsericon(userdata,usericon);
         mDatabase.child("users").child(UserUid).setValue(userdata);
+    }
+    public void setUsericon(UserData temp,ImageView img){
+        if(temp.headshot>0&&temp.headshot<5){
+            img.setImageResource(getResources().getIdentifier("headboy"+ temp.headshot, "drawable", getPackageName()));
+        }
+        else if (temp.headshot>4&&temp.headshot<9){
+            img.setImageResource(getResources().getIdentifier("headgirl"+ (temp.headshot-4), "drawable", getPackageName()));
+        }
+        else {
+            userdata.headshot=1;
+            img.setImageResource(getResources().getIdentifier("headboy1", "drawable", getPackageName()));
+        }
     }
 }

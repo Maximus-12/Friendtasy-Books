@@ -27,14 +27,15 @@ public class ProfileFragment extends Fragment {
 
 
     //private ProfileViewModel profileViewModel;
-
+    ImageView image_Avatar;
+    UserData userdata;
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.fragment_profile, container, false);
         NavController navCtrl = findNavController(this);
-        UserData userdata=((MainActivity)getActivity()).read_data();
-
-        ImageView image_Avatar = root.findViewById(R.id.image_Avatar);
+        userdata=((MainActivity)getActivity()).read_data();
+        image_Avatar = root.findViewById(R.id.image_Avatar);
+        ((MainActivity)getActivity()).setUsericon(userdata,image_Avatar);
         //image change
         TextView nickname =  root.findViewById(R.id.text_NicknameText);
         nickname.setText((userdata.username));
@@ -63,12 +64,27 @@ public class ProfileFragment extends Fragment {
         save_profile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "儲存成功！(其實不用這顆按鍵(?))", Snackbar.LENGTH_LONG)
+                Snackbar.make(view, "暫時拿來測試頭貼更換", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
+                userdata.headshot++;
+                ((MainActivity)getActivity()).setUsericon(userdata,image_Avatar);
+                //setUsericon();
                 ((MainActivity)getActivity()).write_data(userdata);
             }
         });
         return root;
     }
+    /*private void setUsericon(){
+        if(userdata.headshot>0&&userdata.headshot<5){
+            image_Avatar.setImageResource(getResources().getIdentifier("headboy"+ userdata.headshot, "drawable", getActivity().getPackageName()));
+        }
+        else if (userdata.headshot>4&&userdata.headshot<9){
+            image_Avatar.setImageResource(getResources().getIdentifier("headgirl"+ (userdata.headshot-4), "drawable", getActivity().getPackageName()));
+        }
+        else {
+            userdata.headshot=1;
+            image_Avatar.setImageResource(getResources().getIdentifier("headboy1", "drawable", getActivity().getPackageName()));
+        }
+    }*/
 }
 

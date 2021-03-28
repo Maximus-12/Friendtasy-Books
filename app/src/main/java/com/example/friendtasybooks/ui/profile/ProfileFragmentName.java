@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -29,6 +30,8 @@ public class ProfileFragmentName extends Fragment {
         View root = inflater.inflate(R.layout.fragment_profile_name, container, false);
         NavController navCtrl = findNavController(this);
         UserData userdata=((MainActivity)getActivity()).read_data();
+        ImageView image_Avatar = root.findViewById(R.id.image_Avatar);
+        ((MainActivity)getActivity()).setUsericon(userdata,image_Avatar);
 
         EditText profile_name=root.findViewById(R.id.profile_name); //profile_name.getText().toString()
         Button profile_name_button = root.findViewById(R.id.profile_name_button);
@@ -36,8 +39,9 @@ public class ProfileFragmentName extends Fragment {
             @Override
             public void onClick(View view) {
                 userdata.username=profile_name.getText().toString();
+                if(userdata.username.isEmpty()) userdata.username="未輸入";
                 ((MainActivity)getActivity()).write_data(userdata);
-                navCtrl.navigate(R.id.nav_profile);
+                navCtrl.navigate(R.id.action_nav_profile_name_to_nav_profile);
             }
         });
         return root;
