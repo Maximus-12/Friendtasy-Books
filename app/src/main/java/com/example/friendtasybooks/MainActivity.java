@@ -8,6 +8,7 @@ import android.preference.PreferenceManager;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Menu;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -116,7 +117,13 @@ public class MainActivity extends AppCompatActivity {
             // FirebaseUser.getIdToken() instead.
             String uid = user.getUid();
         }
-
+        Button logout = findViewById(R.id.logout);
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                signOut();
+            }
+        });
     }
 
     @Override
@@ -136,5 +143,19 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
+    }
+    private void signOut() {
+        mFirebaseAuth.signOut();
+        mSignInClient.signOut();
+        startActivity(new Intent(this, LoginActivity.class));
+        finish();
+    }
+    public String getUserName() {
+        FirebaseUser user = mFirebaseAuth.getCurrentUser();
+        if (user != null) {
+            return user.getDisplayName();
+        }
+
+        return "anonymous";
     }
 }

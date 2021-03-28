@@ -31,7 +31,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.652"
         app:layout_constraintStart_toEndOf="@+id/text_Sex"
-        app:layout_constraintTop_toBottomOf="@+id/text_Nickname2" />
+        app:layout_constraintTop_toBottomOf="@+id/text_NicknameText" />
 
 
 
@@ -52,6 +52,7 @@
         android:layout_height="90dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="8dp"
+        android:clickable="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.806"
         app:layout_constraintStart_toEndOf="@+id/text_Avatar"
@@ -108,11 +109,12 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/text_Nickname2"
+        android:id="@+id/text_NicknameText"
         style="@style/whiteText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="52dp"
+        android:clickable="true"
         android:text="Waiting"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.726"

@@ -140,7 +140,7 @@
         tools:text="text" />
 
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/profile_name_button"
         style="@style/profile_block_button"
         android:layout_marginTop="230dp"
         android:text="確定"
