@@ -157,7 +157,8 @@ public class MainActivity extends AppCompatActivity {
                     HashMap post = (HashMap) task.getResult().getValue();
                     if(post==null){
                         Log.d("firebase data", String.valueOf(post));
-                        userdata = new UserData(0,user.getDisplayName(),0,"未選擇");
+                        userdata = new UserData(5,user.getDisplayName(),0,"未選擇");
+                        username.setText(userdata.username);
                         mDatabase.child("users").child(user.getUid()).setValue(userdata);
                     }
                     else{
