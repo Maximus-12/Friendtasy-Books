@@ -9,7 +9,7 @@
 
     <ImageView
         android:id="@+id/imageView17"
-        android:layout_width="300dp"
+        android:layout_width="200dp"
         android:layout_height="390dp"
         android:src="@drawable/title_page"
         app:layout_constraintBottom_toBottomOf="parent"
