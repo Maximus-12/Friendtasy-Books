@@ -1,20 +1,16 @@
-package com.example.friendtasybooks.ui.rule;
+package com.example.friendtasybooks.ui.badge;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProvider;
 
 import com.example.friendtasybooks.R;
 
-public class RuleFragment extends Fragment {
+public class BadgeFragment extends Fragment {
 
 
     //private ProfileViewModel profileViewModel;
@@ -22,6 +18,6 @@ public class RuleFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
 
-        return inflater.inflate(R.layout.fragment_rule, container, false);
+        return inflater.inflate(R.layout.fragment_badge, container, false);
     }
 }

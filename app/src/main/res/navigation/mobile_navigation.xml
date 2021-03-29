@@ -9,7 +9,11 @@
         android:id="@+id/nav_home"
         android:name="com.example.friendtasybooks.ui.home.HomeFragment"
         android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_nav_home_to_nav_mybook"
+            app:destination="@id/nav_mybook" />
+    </fragment>
     <fragment
         android:id="@+id/nav_profile"
         android:name="com.example.friendtasybooks.ui.profile.ProfileFragment"
@@ -42,12 +46,12 @@
     </fragment>
     <fragment
         android:id="@+id/nav_mybook"
-        android:name="com.example.friendtasybooks.ui.slideshow.SlideshowFragment"
+        android:name="com.example.friendtasybooks.ui.home.MybookFragment"
         android:label="@string/menu_mybook"
         tools:layout="@layout/fragment_mybook" />
     <fragment
         android:id="@+id/nav_badge"
-        android:name="com.example.friendtasybooks.ui.slideshow.SlideshowFragment"
+        android:name="com.example.friendtasybooks.ui.badge.BadgeFragment"
         android:label="@string/menu_badge"
         tools:layout="@layout/fragment_badge" />
     <fragment

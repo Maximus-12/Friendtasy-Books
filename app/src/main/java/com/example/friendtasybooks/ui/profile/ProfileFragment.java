@@ -18,7 +18,6 @@ import androidx.navigation.NavController;
 import com.example.friendtasybooks.MainActivity;
 import com.example.friendtasybooks.R;
 import com.example.friendtasybooks.UserData;
-import com.example.friendtasybooks.ui.slideshow.SlideshowViewModel;
 import com.google.android.material.snackbar.Snackbar;
 
 import static androidx.navigation.fragment.NavHostFragment.findNavController;
