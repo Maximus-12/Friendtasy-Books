@@ -18,7 +18,7 @@
             android:title="@string/menu_badge" />
         <item
             android:id="@+id/nav_friends"
-            android:icon="@drawable/friendIcon"
+            android:icon="@drawable/friendicon"
             android:title="@string/menu_friends" />
     </group>
 </menu>

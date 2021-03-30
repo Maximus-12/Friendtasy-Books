@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_nav_home_to_nav_mybook"
             app:destination="@id/nav_mybook" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_mybook_select"
+            app:destination="@id/nav_mybook_select" />
     </fragment>
     <fragment
         android:id="@+id/nav_profile"
@@ -48,7 +51,48 @@
         android:id="@+id/nav_mybook"
         android:name="com.example.friendtasybooks.ui.home.MybookFragment"
         android:label="@string/menu_mybook"
-        tools:layout="@layout/fragment_mybook" />
+        tools:layout="@layout/fragment_mybook" >
+        <action
+            android:id="@+id/action_nav_mybook_to_nav_mybook_classify"
+            app:destination="@id/nav_mybook_classify" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_mybook_classify"
+        android:name="com.example.friendtasybooks.ui.home.MybookFragmentClassify"
+        android:label="@string/menu_mybook"
+        tools:layout="@layout/fragment_mybook_classify" >
+        <action
+            android:id="@+id/action_nav_mybook_classify_to_nav_mybook_get_ticket"
+            app:destination="@id/nav_mybook_get_ticket" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_mybook_get_ticket"
+        android:name="com.example.friendtasybooks.ui.home.MybookFragmentGetTicket"
+        android:label="@string/menu_mybook"
+        tools:layout="@layout/fragment_mybook_get_ticket" />
+    <fragment
+        android:id="@+id/nav_mybook_select"
+        android:name="com.example.friendtasybooks.ui.home.MybookFragmentSelect"
+        android:label="@string/menu_mybook"
+        tools:layout="@layout/fragment_mybook_select" >
+        <action
+            android:id="@+id/action_nav_mybook_select_to_nav_mybook_cstore"
+            app:destination="@id/nav_mybook_cstore" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_mybook_cstore"
+        android:name="com.example.friendtasybooks.ui.home.MybookFragmentCstore"
+        android:label="@string/menu_mybook"
+        tools:layout="@layout/fragment_mybook_cstore" >
+        <action
+            android:id="@+id/action_nav_mybook_cstore_to_nav_mybook_exchange"
+            app:destination="@id/nav_mybook_exchange" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_mybook_exchange"
+        android:name="com.example.friendtasybooks.ui.home.MybookFragmentExchange"
+        android:label="@string/menu_mybook"
+        tools:layout="@layout/fragment_mybook_exchange" />
     <fragment
         android:id="@+id/nav_badge"
         android:name="com.example.friendtasybooks.ui.badge.BadgeFragment"
