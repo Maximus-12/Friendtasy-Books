@@ -12,24 +12,23 @@
 
     <ImageView
         android:id="@+id/login_title"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginBottom="120dp"
-        app:layout_constraintHorizontal_bias="0.806"
-        app:layout_constraintStart_toEndOf="@+id/text_Avatar"
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="150dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/login"
-        />
+        app:srcCompat="@drawable/login" />
 
     <Button
         android:id="@+id/loginbtn"
-        app:backgroundTint="@color/yellow"
         style="@style/profile_Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="120dp"
+        android:layout_marginBottom="150dp"
         android:scrollbarStyle="outsideOverlay"
         android:text="進入幻書世界"
+        app:backgroundTint="@color/yellow"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
