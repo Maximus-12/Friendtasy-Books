@@ -217,7 +217,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
-        android:id="@+id/imageButton2"
+        android:id="@+id/imageButton1"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginTop="52dp"
@@ -229,7 +229,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
-        android:id="@+id/imageButton3"
+        android:id="@+id/imageButton2"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginTop="172dp"
@@ -242,7 +242,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
-        android:id="@+id/imageButton4"
+        android:id="@+id/imageButton3"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginTop="296dp"
@@ -255,7 +255,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
-        android:id="@+id/imageButton5"
+        android:id="@+id/imageButton4"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginTop="416dp"
@@ -268,7 +268,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
-        android:id="@+id/imageButton6"
+        android:id="@+id/imageButton5"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginTop="536dp"
@@ -281,7 +281,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
-        android:id="@+id/imageButton7"
+        android:id="@+id/imageButton6"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginTop="656dp"

@@ -110,7 +110,50 @@
         android:id="@+id/nav_friends"
         android:name="com.example.friendtasybooks.ui.friends.FriendFragment"
         android:label="@string/menu_friends"
-        tools:layout="@layout/fragment_friends" />
+        tools:layout="@layout/fragment_friends" >
+        <action
+            android:id="@+id/action_nav_friends_to_nav_mailpaper_choose"
+            app:destination="@id/nav_mailpaper_choose" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_mailpaper_choose"
+        android:name="com.example.friendtasybooks.ui.friends.FriendFragmentMailpaperChoose"
+        android:label="@string/menu_friends"
+        tools:layout="@layout/fragment_mailpaper_choose" >
+        <action
+            android:id="@+id/action_nav_mailpaper_choose_to_nav_mailpaper_write"
+            app:destination="@id/nav_mailpaper_write" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_mailpaper_write"
+        android:name="com.example.friendtasybooks.ui.friends.FriendFragmentMailpaperWrite"
+        android:label="@string/menu_friends"
+        tools:layout="@layout/fragment_mailpaper_write" >
+        <action
+            android:id="@+id/action_nav_mailpaper_write_to_nav_friends"
+            app:popUpTo="@id/nav_friends" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_mail"
+        android:name="com.example.friendtasybooks.ui.friends.FriendFragmentMail"
+        android:label="@string/menu_friends"
+        tools:layout="@layout/fragment_mail" >
+        <action
+            android:id="@+id/action_nav_mail_to_nav_mailpaper_read"
+            app:destination="@id/nav_mailpaper_read" />
+        <action
+            android:id="@+id/action_nav_mail_to_nav_friends"
+            app:destination="@id/nav_friends" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_mailpaper_read"
+        android:name="com.example.friendtasybooks.ui.friends.FriendFragmentMailpaperRead"
+        android:label="@string/menu_friends"
+        tools:layout="@layout/fragment_mailpaper_read" >
+        <action
+            android:id="@+id/action_nav_mailpaper_read_to_nav_mail"
+            app:popUpTo="@id/nav_mail" />
+    </fragment>
     <fragment
         android:id="@+id/nav_rule"
         android:name="com.example.friendtasybooks.ui.rule.RuleFragment"

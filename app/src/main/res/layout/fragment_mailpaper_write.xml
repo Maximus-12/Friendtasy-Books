@@ -31,7 +31,7 @@
         tools:text="請輸入文本..." />
 
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/sendbutton"
         android:layout_width="150dp"
         android:layout_height="50dp"
         android:layout_marginBottom="80dp"
