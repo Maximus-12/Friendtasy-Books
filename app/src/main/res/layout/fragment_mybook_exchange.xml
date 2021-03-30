@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_black"
+    android:textColor="@color/word_white">
+
+    <Button
+        android:id="@+id/button2"
+        style="@style/mybook_YellowButton"
+        android:layout_marginBottom="92dp"
+        android:text="確定"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="241dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginEnd="76dp"
+        android:src="@drawable/title"
+        app:layout_constraintBottom_toTopOf="@+id/editText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.596" />
+
+    <TextView
+        android:id="@+id/text_prompt1"
+        style="@style/whiteText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="您的幻書屬於?"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView8" />
+
+    <TextView
+        android:id="@+id/text_prompt2"
+        android:layout_width="333dp"
+        android:layout_height="43dp"
+        android:layout_marginBottom="15dp"
+        android:fontFamily="@font/genjyuugothic"
+        android:text="正確的幻書分類可以提高成功機率呦!"
+        android:textColor="@color/word_white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <CheckBox
+        android:id="@+id/b1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:checked="true"
+        android:fontFamily="@font/genjyuugothic"
+        android:text="文學小說"
+        android:textColor="@color/word_white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.207"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_prompt1" />
+
+    <CheckBox
+        android:id="@+id/b2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:checked="true"
+        android:fontFamily="@font/genjyuugothic"
+        android:text="商業理財"
+        android:textColor="@color/word_white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.207"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_prompt1" />
+
+    <CheckBox
+        android:id="@+id/b3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="108dp"
+        android:checked="true"
+        android:fontFamily="@font/genjyuugothic"
+        android:text="藝術設計"
+        android:textColor="@color/word_white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.207"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_prompt1" />
+
+    <CheckBox
+        android:id="@+id/b4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="156dp"
+        android:checked="true"
+        android:fontFamily="@font/genjyuugothic"
+        android:text="人文史地"
+        android:textColor="@color/word_white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.207"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_prompt1" />
+
+    <CheckBox
+        android:id="@+id/b5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="204dp"
+        android:checked="true"
+        android:fontFamily="@font/genjyuugothic"
+        android:text="社會科學"
+        android:textColor="@color/word_white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.207"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_prompt1" />
+
+    <CheckBox
+        android:id="@+id/b6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:checked="true"
+        android:fontFamily="@font/genjyuugothic"
+        android:text="自然科普"
+        android:textColor="@color/word_white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_prompt1" />
+
+    <CheckBox
+        android:id="@+id/b7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:checked="true"
+        android:fontFamily="@font/genjyuugothic"
+        android:text="心靈勵志"
+        android:textColor="@color/word_white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_prompt1" />
+
+    <CheckBox
+        android:id="@+id/b8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="108dp"
+        android:checked="true"
+        android:fontFamily="@font/genjyuugothic"
+        android:text="醫療保健"
+        android:textColor="@color/word_white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_prompt1" />
+
+    <CheckBox
+        android:id="@+id/b9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="156dp"
+        android:checked="true"
+        android:fontFamily="@font/genjyuugothic"
+        android:text="生活風格"
+        android:textColor="@color/word_white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_prompt1" />
+
+    <CheckBox
+        android:id="@+id/b10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="204dp"
+        android:checked="true"
+        android:fontFamily="@font/genjyuugothic"
+        android:text="旅遊雜誌"
+        android:textColor="@color/word_white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_prompt1" />
+
+    <CheckBox
+        android:id="@+id/b11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:checked="true"
+        android:fontFamily="@font/genjyuugothic"
+        android:text="輕小說"
+        android:textColor="@color/word_white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.757"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_prompt1" />
+
+    <CheckBox
+        android:id="@+id/b12"
+        android:layout_width="82dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="60dp"
+        android:checked="true"
+        android:fontFamily="@font/genjyuugothic"
+        android:text="漫畫"
+        android:textColor="@color/word_white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/b7"
+        app:layout_constraintTop_toBottomOf="@+id/text_prompt1" />
+
+    <CheckBox
+        android:id="@+id/b13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="108dp"
+        android:checked="true"
+        android:fontFamily="@font/genjyuugothic"
+        android:text="語言學習"
+        android:textColor="@color/word_white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.792"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_prompt1" />
+
+    <CheckBox
+        android:id="@+id/b14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="156dp"
+        android:checked="true"
+        android:fontFamily="@font/genjyuugothic"
+        android:text="中華文學"
+        android:textColor="@color/word_white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.792"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_prompt1" />
+
+    <CheckBox
+        android:id="@+id/b15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="204dp"
+        android:checked="true"
+        android:fontFamily="@font/genjyuugothic"
+        android:text="外國文學"
+        android:textColor="@color/word_white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.792"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_prompt1" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="334dp"
+        android:layout_height="413dp"
+        android:layout_marginTop="172dp"
+        android:background="@drawable/word_white_radius"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView18"
+        android:layout_width="181dp"
+        android:layout_height="86dp"
+        android:layout_marginStart="48dp"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.408"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/text_prompt1"
+        app:layout_constraintVertical_bias="0.169"
+        app:srcCompat="@drawable/book_tokens" />
+
+    <TextView
+        android:id="@+id/textView33"
+        style="@style/friend_blackText"
+        android:layout_width="300dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="236dp"
+        android:text="請問是否消耗幻書券"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button8"
+        style="@style/mybook_YellowButton"
+        android:layout_width="184dp"
+        android:layout_height="77dp"
+        android:layout_marginTop="36dp"
+        android:text="確定"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/b7" />
+</androidx.constraintlayout.widget.ConstraintLayout>
