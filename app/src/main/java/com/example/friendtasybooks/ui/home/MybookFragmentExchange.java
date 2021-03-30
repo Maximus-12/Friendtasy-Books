@@ -11,10 +11,11 @@ import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
 
 import com.example.friendtasybooks.R;
+import com.google.android.material.snackbar.Snackbar;
 
 import static androidx.navigation.fragment.NavHostFragment.findNavController;
 
-public class MybookFragment extends Fragment {
+public class MybookFragmentExchange extends Fragment {
 
 
     //private ProfileViewModel profileViewModel;
@@ -22,13 +23,15 @@ public class MybookFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
 
-        View root = inflater.inflate(R.layout.fragment_mybook, container, false);
+        View root = inflater.inflate(R.layout.fragment_mybook_exchange, container, false);
         NavController navCtrl = findNavController(this);
         Button yesbutton = root.findViewById(R.id.yesbutton);
         yesbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                navCtrl.navigate(R.id.nav_mybook_classify);
+                Snackbar.make(view, "幻書成功！", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
+                navCtrl.navigate(R.id.action_nav_mybook_exchange_to_nav_home);
             }
         });
         return root;

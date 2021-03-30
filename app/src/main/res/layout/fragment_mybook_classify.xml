@@ -9,7 +9,7 @@
     android:textColor="@color/word_white">
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/yesbutton"
         style="@style/mybook_YellowButton"
         android:layout_marginBottom="92dp"
         android:text="確定"

@@ -69,7 +69,11 @@
         android:id="@+id/nav_mybook_get_ticket"
         android:name="com.example.friendtasybooks.ui.home.MybookFragmentGetTicket"
         android:label="@string/menu_mybook"
-        tools:layout="@layout/fragment_mybook_get_ticket" />
+        tools:layout="@layout/fragment_mybook_get_ticket" >
+        <action
+            android:id="@+id/action_nav_mybook_get_ticket_to_nav_home"
+            app:popUpTo="@id/nav_home" />
+    </fragment>
     <fragment
         android:id="@+id/nav_mybook_select"
         android:name="com.example.friendtasybooks.ui.home.MybookFragmentSelect"
@@ -92,7 +96,11 @@
         android:id="@+id/nav_mybook_exchange"
         android:name="com.example.friendtasybooks.ui.home.MybookFragmentExchange"
         android:label="@string/menu_mybook"
-        tools:layout="@layout/fragment_mybook_exchange" />
+        tools:layout="@layout/fragment_mybook_exchange" >
+        <action
+            android:id="@+id/action_nav_mybook_exchange_to_nav_home"
+            app:popUpTo="@id/nav_home" />
+    </fragment>
     <fragment
         android:id="@+id/nav_badge"
         android:name="com.example.friendtasybooks.ui.badge.BadgeFragment"

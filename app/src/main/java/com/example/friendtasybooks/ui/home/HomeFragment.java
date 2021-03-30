@@ -70,6 +70,13 @@ public class HomeFragment extends Fragment {
                 navCtrl.navigate(R.id.nav_mybook);
             }
         });
+        Button wantbutton = root.findViewById(R.id.wantbutton);
+        wantbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                navCtrl.navigate(R.id.nav_mybook_select);
+            }
+        });
         return root;
     }
 }

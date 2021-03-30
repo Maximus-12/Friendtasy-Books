@@ -295,7 +295,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button8"
+        android:id="@+id/yesbutton"
         style="@style/mybook_YellowButton"
         android:layout_width="184dp"
         android:layout_height="77dp"

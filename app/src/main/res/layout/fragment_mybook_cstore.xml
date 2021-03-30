@@ -178,7 +178,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView31" />
 
     <Button
-        android:id="@+id/button7"
+        android:id="@+id/yesbutton"
         style="@style/profile_block_button"
         android:layout_marginTop="230dp"
         android:text="確定"

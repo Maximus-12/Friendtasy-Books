@@ -14,7 +14,7 @@ import com.example.friendtasybooks.R;
 
 import static androidx.navigation.fragment.NavHostFragment.findNavController;
 
-public class MybookFragment extends Fragment {
+public class MybookFragmentClassify extends Fragment {
 
 
     //private ProfileViewModel profileViewModel;
@@ -22,13 +22,13 @@ public class MybookFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
 
-        View root = inflater.inflate(R.layout.fragment_mybook, container, false);
+        View root = inflater.inflate(R.layout.fragment_mybook_classify, container, false);
         NavController navCtrl = findNavController(this);
         Button yesbutton = root.findViewById(R.id.yesbutton);
         yesbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                navCtrl.navigate(R.id.nav_mybook_classify);
+                navCtrl.navigate(R.id.nav_mybook_get_ticket);
             }
         });
         return root;
