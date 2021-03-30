@@ -90,5 +90,13 @@
         <item name="android:layout_width">200dp</item>
         <item name="android:gravity">center_vertical</item>
     </style>
+    <style name="mail_white_text">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/word_white</item>
+        <item name="android:fontFamily">@font/genjyuugothic</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:layout_width">100dp</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
 
 </resources>
