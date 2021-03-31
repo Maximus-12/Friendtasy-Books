@@ -286,7 +286,7 @@
     <TextView
         android:id="@+id/textView33"
         style="@style/friend_blackText"
-        android:layout_width="300dp"
+        android:layout_width="330dp"
         android:layout_height="54dp"
         android:layout_marginTop="236dp"
         android:text="請問是否消耗幻書券"
