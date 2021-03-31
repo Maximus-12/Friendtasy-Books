@@ -11,6 +11,7 @@ import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
 
 import com.example.friendtasybooks.R;
+import com.google.android.material.snackbar.Snackbar;
 
 import static androidx.navigation.fragment.NavHostFragment.findNavController;
 
@@ -28,6 +29,8 @@ public class FriendFragmentMailpaperWrite extends Fragment {
         sendbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Snackbar.make(view, "發送成功！", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
                 navCtrl.navigate(R.id.action_nav_mailpaper_write_to_nav_friends);
             }
         });
