@@ -14,8 +14,9 @@
             android:id="@+id/action_nav_home_to_nav_mybook"
             app:destination="@id/nav_mybook" />
         <action
-            android:id="@+id/action_nav_home_to_nav_mybook_select"
-            app:destination="@id/nav_mybook_select" />
+            android:id="@+id/action_nav_home_to_nav_mybook_select_classify"
+            app:destination="@id/nav_mybook_select_classify" />
+
     </fragment>
     <fragment
         android:id="@+id/nav_profile"
@@ -73,6 +74,15 @@
         <action
             android:id="@+id/action_nav_mybook_get_ticket_to_nav_home"
             app:popUpTo="@id/nav_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_mybook_select_classify"
+        android:name="com.example.friendtasybooks.ui.home.MybookFragmentSelect"
+        android:label="@string/menu_mybook"
+        tools:layout="@layout/fragment_mybook_select_classify" >>
+        <action
+            android:id="@+id/action_nav_mybook_select_classify_to_nav_mybook_select"
+            app:destination="@id/nav_mybook_select" />
     </fragment>
     <fragment
         android:id="@+id/nav_mybook_select"

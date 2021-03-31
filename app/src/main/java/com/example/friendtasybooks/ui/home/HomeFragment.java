@@ -74,7 +74,7 @@ public class HomeFragment extends Fragment {
         wantbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                navCtrl.navigate(R.id.nav_mybook_select);
+                navCtrl.navigate(R.id.nav_mybook_select_classify);
             }
         });
         return root;
