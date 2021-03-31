@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.profile.ProfileFragment"
+    tools:context=".ui.profile.ProfileFragmentName"
     android:background="@color/bg_black"
     android:textColor="@color/word_white">
 
@@ -130,6 +130,7 @@
         android:layout_marginTop="30dp"
         android:alpha="0.7"
         android:textColor="@color/word_gray"
+        tools:text="TextView"
         android:background="@color/yellow"
         android:gravity="center"
         android:fontFamily="@font/genjyuugothic"

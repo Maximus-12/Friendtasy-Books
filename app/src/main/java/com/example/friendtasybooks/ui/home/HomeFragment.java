@@ -39,6 +39,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -46,9 +47,11 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.navigation.NavController;
 
 import com.example.friendtasybooks.R;
-import com.example.friendtasybooks.ui.slideshow.SlideshowViewModel;
+
+import static androidx.navigation.fragment.NavHostFragment.findNavController;
 
 public class HomeFragment extends Fragment {
 
@@ -58,6 +61,22 @@ public class HomeFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
 
-        return inflater.inflate(R.layout.fragment_home, container, false);
+        View root = inflater.inflate(R.layout.fragment_home, container, false);
+        NavController navCtrl = findNavController(this);
+        Button havebutton = root.findViewById(R.id.havebutton);
+        havebutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                navCtrl.navigate(R.id.nav_mybook);
+            }
+        });
+        Button wantbutton = root.findViewById(R.id.wantbutton);
+        wantbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                navCtrl.navigate(R.id.nav_mybook_select);
+            }
+        });
+        return root;
     }
 }

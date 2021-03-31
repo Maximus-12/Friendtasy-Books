@@ -118,24 +118,26 @@
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
     <TextView
-        android:id="@+id/textView10"
+        android:id="@+id/mail1"
         style="@style/mail_white_text"
         android:layout_marginTop="65dp"
-        tools:text="信件主旨..."
+        android:text="信件主旨..."
+        android:clickable="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.944"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView11"
+        android:id="@+id/mail2"
         style="@style/mail_white_text"
         android:layout_marginTop="90dp"
+        android:clickable="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.944"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView10"
-        tools:text="信件主旨..." />
+        app:layout_constraintTop_toBottomOf="@+id/mail1"
+        android:text="信件主旨..." />
 
     <TextView
         android:id="@+id/textView12"
@@ -144,7 +146,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.944"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView11"
+        app:layout_constraintTop_toBottomOf="@+id/mail2"
         tools:text="信件主旨..." />
 
     <TextView

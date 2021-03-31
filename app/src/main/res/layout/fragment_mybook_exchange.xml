@@ -11,7 +11,7 @@
     <Button
         android:id="@+id/button2"
         style="@style/mybook_YellowButton"
-        android:layout_marginBottom="92dp"
+        android:layout_marginBottom="60dp"
         android:text="確定"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -20,13 +20,13 @@
 
     <ImageView
         android:id="@+id/imageView8"
-        android:layout_width="241dp"
-        android:layout_height="180dp"
-        android:layout_marginTop="120dp"
-        android:layout_marginEnd="76dp"
+        android:layout_width="240dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="90dp"
         android:src="@drawable/title"
         app:layout_constraintBottom_toTopOf="@+id/editText"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.596" />
 
@@ -35,7 +35,6 @@
         style="@style/whiteText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
         android:text="您的幻書屬於?"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -45,12 +44,12 @@
         android:id="@+id/text_prompt2"
         android:layout_width="333dp"
         android:layout_height="43dp"
-        android:layout_marginBottom="15dp"
+        android:layout_marginBottom="140dp"
         android:fontFamily="@font/genjyuugothic"
         android:text="正確的幻書分類可以提高成功機率呦!"
         android:textColor="@color/word_white"
         android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -58,7 +57,7 @@
         android:id="@+id/b1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="15dp"
         android:checked="true"
         android:fontFamily="@font/genjyuugothic"
         android:text="文學小說"
@@ -128,7 +127,7 @@
         android:id="@+id/b6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="15dp"
         android:checked="true"
         android:fontFamily="@font/genjyuugothic"
         android:text="自然科普"
@@ -193,7 +192,7 @@
         android:id="@+id/b11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="15dp"
         android:checked="true"
         android:fontFamily="@font/genjyuugothic"
         android:text="輕小說"
@@ -213,7 +212,7 @@
         android:text="漫畫"
         android:textColor="@color/word_white"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.075"
         app:layout_constraintStart_toEndOf="@+id/b7"
         app:layout_constraintTop_toBottomOf="@+id/text_prompt1" />
 
@@ -261,12 +260,12 @@
 
     <TextView
         android:id="@+id/textView8"
-        android:layout_width="334dp"
-        android:layout_height="413dp"
-        android:layout_marginTop="172dp"
+        android:layout_width="330dp"
+        android:layout_height="370dp"
+        android:layout_marginTop="220dp"
         android:background="@drawable/word_white_radius"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -275,11 +274,12 @@
         android:layout_width="181dp"
         android:layout_height="86dp"
         android:layout_marginStart="48dp"
+        android:layout_marginTop="100dp"
         app:layout_constraintBottom_toTopOf="@+id/button2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.408"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/text_prompt1"
+        app:layout_constraintTop_toTopOf="@+id/textView8"
         app:layout_constraintVertical_bias="0.169"
         app:srcCompat="@drawable/book_tokens" />
 
@@ -288,21 +288,23 @@
         style="@style/friend_blackText"
         android:layout_width="330dp"
         android:layout_height="54dp"
-        android:layout_marginTop="236dp"
+        android:layout_marginTop="270dp"
         android:text="請問是否消耗幻書券"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button8"
+        android:id="@+id/yesbutton"
         style="@style/mybook_YellowButton"
-        android:layout_width="184dp"
-        android:layout_height="77dp"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
         android:layout_marginTop="36dp"
         android:text="確定"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/b7" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

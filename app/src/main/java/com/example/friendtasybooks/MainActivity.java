@@ -90,14 +90,14 @@ public class MainActivity extends AppCompatActivity {
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        FloatingActionButton fab = findViewById(R.id.fab);
+        /*FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
-        });
+        });*/
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
         // Passing each menu ID as a set of Ids because each
@@ -157,7 +157,8 @@ public class MainActivity extends AppCompatActivity {
                     HashMap post = (HashMap) task.getResult().getValue();
                     if(post==null){
                         Log.d("firebase data", String.valueOf(post));
-                        userdata = new UserData(0,user.getDisplayName(),0,"未選擇");
+                        userdata = new UserData(5,user.getDisplayName(),0,"未選擇");
+                        username.setText(userdata.username);
                         mDatabase.child("users").child(user.getUid()).setValue(userdata);
                     }
                     else{

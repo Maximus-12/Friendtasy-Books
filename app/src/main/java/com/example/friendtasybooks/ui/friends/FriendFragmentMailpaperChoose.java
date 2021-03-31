@@ -12,11 +12,10 @@ import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
 
 import com.example.friendtasybooks.R;
-import com.google.android.material.snackbar.Snackbar;
 
 import static androidx.navigation.fragment.NavHostFragment.findNavController;
 
-public class FriendFragment extends Fragment {
+public class FriendFragmentMailpaperChoose extends Fragment {
 
 
     //private ProfileViewModel profileViewModel;
@@ -24,24 +23,13 @@ public class FriendFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
 
-        View root = inflater.inflate(R.layout.fragment_friends, container, false);
+        View root = inflater.inflate(R.layout.fragment_mailpaper_choose, container, false);
         NavController navCtrl = findNavController(this);
-
-        ImageButton btn1 = root.findViewById(R.id.imageButton1);
-        btn1.setOnClickListener(new View.OnClickListener() {
+        Button yesbutton = root.findViewById(R.id.yesbutton);
+        yesbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                navCtrl.navigate(R.id.nav_mailpaper_choose);
-            }
-        });
-
-        ImageButton btn2 = root.findViewById(R.id.imageButton2);
-        btn2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "測試用", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-                navCtrl.navigate(R.id.nav_mail);
+                navCtrl.navigate(R.id.nav_mailpaper_write);
             }
         });
         return root;
