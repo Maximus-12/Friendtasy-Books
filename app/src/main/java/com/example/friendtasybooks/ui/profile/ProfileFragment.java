@@ -38,12 +38,13 @@ public class ProfileFragment extends Fragment {
         //image change
         TextView nickname =  root.findViewById(R.id.text_NicknameText);
         nickname.setText((userdata.username));
-        TextView gender =  root.findViewById(R.id.text_SexText);
-        if(userdata.gender==1) gender.setText("男");
+        TextView gender =  root.findViewById(R.id.text_GenderText);
+        /*if(userdata.gender==1) gender.setText("男");
         else if(userdata.gender==2) gender.setText("女");
-        else gender.setText("未選擇");
-        TextView city =  root.findViewById(R.id.text_LocalText);
-        city.setText((userdata.city));
+        else gender.setText("未選擇");*/
+        gender.setText(userdata.gender);
+        TextView area =  root.findViewById(R.id.text_AreaText);
+        area.setText((userdata.city));
 
 
         image_Avatar.setOnClickListener(new View.OnClickListener() {
@@ -52,14 +53,25 @@ public class ProfileFragment extends Fragment {
                 navCtrl.navigate(R.id.nav_profile_head);
             }
         });
-        TextView text_NicknameText = root.findViewById(R.id.text_NicknameText);
-        text_NicknameText.setOnClickListener(new View.OnClickListener() {
+        nickname.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 navCtrl.navigate(R.id.nav_profile_name);
             }
         });
-        Button save_profile = root.findViewById(R.id.save_profile);
+        gender.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                navCtrl.navigate(R.id.nav_profile_gender);
+            }
+        });
+        area.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                navCtrl.navigate(R.id.nav_profile_area);
+            }
+        });
+        /*Button save_profile = root.findViewById(R.id.save_profile);
         save_profile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -70,7 +82,7 @@ public class ProfileFragment extends Fragment {
                 //setUsericon();
                 ((MainActivity)getActivity()).write_data(userdata);
             }
-        });
+        });*/
         return root;
     }
     /*private void setUsericon(){

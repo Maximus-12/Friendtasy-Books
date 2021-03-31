@@ -124,13 +124,13 @@
         app:layout_constraintTop_toTopOf="@+id/textView8" />
 
     <EditText
-        android:id="@+id/profile_name"
+        android:id="@+id/profile_area"
         android:layout_width="250dp"
         android:layout_height="50dp"
         android:layout_marginTop="30dp"
         android:alpha="0.7"
         android:textColor="@color/word_gray"
-        tools:text="TextView"
+        tools:text="請輸入所在地區"
         android:background="@color/yellow"
         android:gravity="center"
         android:fontFamily="@font/genjyuugothic"
@@ -141,7 +141,7 @@
          />
 
     <Button
-        android:id="@+id/profile_name_button"
+        android:id="@+id/profile_area_button"
         style="@style/profile_block_button"
         android:layout_marginTop="230dp"
         android:text="確定"

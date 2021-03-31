@@ -157,7 +157,7 @@ public class MainActivity extends AppCompatActivity {
                     HashMap post = (HashMap) task.getResult().getValue();
                     if(post==null){
                         Log.d("firebase data", String.valueOf(post));
-                        userdata = new UserData(5,user.getDisplayName(),0,"未選擇");
+                        userdata = new UserData(5,user.getDisplayName(),"未輸入","未選擇");
                         username.setText(userdata.username);
                         mDatabase.child("users").child(user.getUid()).setValue(userdata);
                     }
@@ -171,12 +171,13 @@ public class MainActivity extends AppCompatActivity {
                         Log.d("gender", String.valueOf(post.get("gender")));
                         Log.d("username", String.valueOf(post.get("username")));
                         Log.d("city", String.valueOf(post.get("city")));*/
-                        userdata = new UserData(0,user.getDisplayName(),0,"未選擇");
+                        userdata = new UserData(0,user.getDisplayName(),"未輸入","未輸入");
                         long hs=(long)post.get("headshot");
                         userdata.headshot=(int)hs;
-                        long gd=(long)post.get("gender");
-                        userdata.gender=(int)gd;
+                        /*long gd=(long)post.get("gender");
+                        userdata.gender=(int)gd;*/
                         userdata.username=(String)post.get("username");
+                        userdata.gender=(String)post.get("gender");
                         userdata.city=(String)post.get("city");
                         Log.d("headshot", String.valueOf(userdata.headshot));
                         Log.d("gender", String.valueOf(userdata.gender));

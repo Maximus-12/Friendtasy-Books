@@ -7,7 +7,8 @@ import com.google.firebase.database.IgnoreExtraProperties;
 public class UserData {
     public int headshot;
     public String username;
-    public int gender;
+    //public int gender;
+    public String gender;
     public String city;
     //public String email;
 
@@ -16,7 +17,8 @@ public class UserData {
     }
 
     //public UserData(String username, String email) {
-    public UserData(int headshot, String username, int gender, String city) {
+    //public UserData(int headshot, String username, int gender, String city) {
+    public UserData(int headshot, String username, String gender, String city) {
         this.headshot = headshot;
         this.username = username;
         this.gender = gender;
