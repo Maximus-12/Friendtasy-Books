@@ -146,7 +146,7 @@
     <fragment
         android:id="@+id/nav_mail"
         android:name="com.example.friendtasybooks.ui.friends.FriendFragmentMail"
-        android:label="@string/menu_friends"
+        android:label="@string/menu_mail"
         tools:layout="@layout/fragment_mail" >
         <action
             android:id="@+id/action_nav_mail_to_nav_mailpaper_read"
@@ -158,7 +158,7 @@
     <fragment
         android:id="@+id/nav_mailpaper_read"
         android:name="com.example.friendtasybooks.ui.friends.FriendFragmentMailpaperRead"
-        android:label="@string/menu_friends"
+        android:label="@string/menu_mail"
         tools:layout="@layout/fragment_mailpaper_read" >
         <action
             android:id="@+id/action_nav_mailpaper_read_to_nav_mail"
