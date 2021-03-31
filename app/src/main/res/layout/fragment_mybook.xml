@@ -14,7 +14,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="36dp"
-        android:layout_marginBottom="72dp"
+        android:layout_marginBottom="60dp"
         android:text="書名"
         app:layout_constraintBottom_toTopOf="@+id/text_author"
         app:layout_constraintStart_toStartOf="parent" />
@@ -24,7 +24,7 @@
         android:layout_width="248dp"
         android:layout_height="36dp"
         android:layout_marginEnd="36dp"
-        android:layout_marginBottom="428dp"
+        android:layout_marginBottom="370dp"
         android:background="@android:drawable/edit_text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -36,17 +36,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="36dp"
-        android:layout_marginBottom="320dp"
+        android:layout_marginBottom="275dp"
         android:text="作者"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
+        android:id="@+id/editText2"
         android:layout_width="248dp"
         android:layout_height="36dp"
         android:layout_marginStart="8dp"
+        android:layout_marginEnd="36dp"
         android:background="@android:drawable/edit_text"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/text_author"
         app:layout_constraintTop_toBottomOf="@+id/editText"
         app:layout_constraintVertical_bias="0.183" />
@@ -54,7 +57,7 @@
     <Button
         android:id="@+id/yesbutton"
         style="@style/mybook_YellowButton"
-        android:layout_marginBottom="160dp"
+        android:layout_marginBottom="130dp"
         android:text="確定"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -63,12 +66,13 @@
 
     <ImageView
         android:id="@+id/imageView8"
-        android:layout_width="241dp"
-        android:layout_height="209dp"
-        android:layout_marginEnd="64dp"
+        android:layout_width="246dp"
+        android:layout_height="157dp"
+        android:layout_marginTop="40dp"
         android:src="@drawable/title"
         app:layout_constraintBottom_toTopOf="@+id/editText"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.596" />
+        app:layout_constraintVertical_bias="0.505" />
 </androidx.constraintlayout.widget.ConstraintLayout>
