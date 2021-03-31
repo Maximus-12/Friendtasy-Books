@@ -1,10 +1,9 @@
-package com.example.friendtasybooks.ui.friends;
+package com.example.friendtasybooks.ui.mail;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageButton;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -12,11 +11,10 @@ import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
 
 import com.example.friendtasybooks.R;
-import com.google.android.material.snackbar.Snackbar;
 
 import static androidx.navigation.fragment.NavHostFragment.findNavController;
 
-public class FriendFragmentMail extends Fragment {
+public class MailFragment extends Fragment {
 
 
     //private ProfileViewModel profileViewModel;

@@ -35,7 +35,7 @@ public class FriendFragment extends Fragment {
             }
         });
 
-        ImageButton btn2 = root.findViewById(R.id.imageButton2);
+        /*ImageButton btn2 = root.findViewById(R.id.imageButton2);
         btn2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -43,7 +43,7 @@ public class FriendFragment extends Fragment {
                         .setAction("Action", null).show();
                 navCtrl.navigate(R.id.nav_mail);
             }
-        });
+        });*/
         return root;
     }
 }
