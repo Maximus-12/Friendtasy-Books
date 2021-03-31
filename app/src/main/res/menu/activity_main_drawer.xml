@@ -20,5 +20,9 @@
             android:id="@+id/nav_friends"
             android:icon="@drawable/friendicon"
             android:title="@string/menu_friends" />
+        <item
+            android:id="@+id/nav_mail"
+            android:icon="@drawable/lettericon"
+            android:title="@string/menu_mail" />
     </group>
 </menu>
